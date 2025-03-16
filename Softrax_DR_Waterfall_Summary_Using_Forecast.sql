@@ -1,6 +1,6 @@
 
 		select 
-			sum(rfd.sxTrxAmount) as Amount, -- changed 4/12/2022
+			sum(rfd.sxTrxAmount) as Amount,
 			-- 12-08-2021 --change accounting period to look to see if record posted in a different period. If so, then show the posted date.
 			concat(year(RFD.SXRECOGNITIONDATE),right(concat(0,month(RFD.SXRECOGNITIONDATE)),2)) as Accounting_Period,
 			ab.sxCode as Accounting_Book,
