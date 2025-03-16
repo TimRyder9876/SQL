@@ -22,7 +22,7 @@ from
             from 
              ssp_cust_items sci
             where
-             sci.collection_code = '20201001-20210331' and
+             sci.collection_code = '20241001-20240331' and
              ssp_use_flg = 0 and
              sci.pob_producttype not in('O','V')
           ) x
