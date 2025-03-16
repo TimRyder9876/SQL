@@ -28,17 +28,6 @@
 			on rfd.sxRevForecastId = rf.sxId and
 			   rfd.sxStatus = 'P' and
 			   rfd.sxRowDeleted = 'N'
-			--inner join sxForecastTemplates FT
-			--on ft.sxId = ri.sxFrcstTemplateId and
-			--   ft.sxRowDeleted = 'N'
-			--inner join sxRevItemToGroups RIG
-			--on rig.sxRowDeleted = 'N' and
-			--	rig.sxRevItemId = RI.SXID and
-			--	rig.sxType = 'O'
-			--inner join sxOrderGroups OG
-			--on og.sxId = rig.sxGroupId and
-			--	og.sxRowDeleted = 'N' and
-			--	og.sxStatus = 'A'
 		where
 			ri.sxRowDeleted = 'N' and
 			ri.sxStatus = 'A'
