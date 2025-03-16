@@ -30,8 +30,8 @@ from dbo.sxJournalEntry je
 	  on p.sxId = ri.sxProductId 
 	 where je.sxRowDeleted = 'N'
 	   and at.sxCode = 'SALES'
-	   and Year(je.sxJEDate) = 2022
-	   and Month(je.sxJEDate) = 2
+	   and Year(je.sxJEDate) = 2024
+	   and Month(je.sxJEDate) = 10
 
 group by
  je.sxCode
