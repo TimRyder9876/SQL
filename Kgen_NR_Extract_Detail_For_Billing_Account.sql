@@ -120,8 +120,8 @@ with gl_matrix as
        nvl(j.section_category,'NULL') = decode(z.SECTION_CATEGORY,'*',nvl(j.section_category,'NULL'),z.SECTION_CATEGORY) and
        nvl(j.product_type,'NULL') = decode(z.PRODUCT_TYPE,'*',nvl(j.product_type,'NULL'),z.PRODUCT_TYPE) and
        nvl(j.channel_code,'NULL') = decode(z.CHANNEL_CODE,'*',nvl(j.channel_code,'NULL'),z.CHANNEL_CODE) and
-      trunc(j.ctcr_batch_prog_dt) <= to_date('2023-05-31','yyyy-mm-dd') and
-       trunc(j.ctcr_batch_prog_dt) >= to_date('2023-05-01','yyyy-mm-dd') 
+      trunc(j.ctcr_batch_prog_dt) <= to_date('2024-10-31','yyyy-mm-dd') and
+       trunc(j.ctcr_batch_prog_dt) >= to_date('2024-10-01','yyyy-mm-dd') 
       group by
        trunc(j.ctcr_batch_prog_dt),
        j.trans_id,
