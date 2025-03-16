@@ -55,7 +55,7 @@ where
  p.pob_source = 'SFDC' and
  nvl(p.txn_status_code,'NO') = 'NO' and
  p.pob_transactionamount > 0 and
- p.created_date <= add_months(last_day(to_date('2021-12-01','yyyy-mm-dd')),1) and
+ p.created_date <= add_months(last_day(to_date('2024-12-01','yyyy-mm-dd')),1) and
  p.pob_producttype = 'Y' and 
  substr(p.pob_revenuestart,0,4) = 2021 and
  months_between(to_date(p.pob_revenueend,'yyyymmdd')+1,to_date(p.pob_revenuestart,'yyyymmdd')) = 12 and
