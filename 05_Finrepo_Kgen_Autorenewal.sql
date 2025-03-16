@@ -1,4 +1,4 @@
-DEFINE VDATE = '2021-12-01';
+DEFINE VDATE = '2024-12-01';
 
 MERGE INTO quantification.pob_txns_export_ssp_quant q
 USING
