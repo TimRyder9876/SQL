@@ -30,7 +30,7 @@ from
 			sum(case when ae.sxtype = 'D' then 1
 			         when ae.sxtype = 'C' then -1 
 				end * ae.sxtransactionalamt) as accountingentrytrxamt
-        from    
+Â Â Â Â Â Â Â Â from Â Â Â 
             dbo.sxOrderGroups as og
 			inner join sxRevItemToGroups rig
 		    on rig.sxGroupId = og.sxId and
@@ -46,7 +46,7 @@ from
 		       ae.sxacctstr in ('DS810-23410-9000-999999-00000-000000000000000',
 				                 'DS810-23435-9000-000000-00000-000000000000000')
             inner join sxJournalEntry je
-            on je.sxid = ae.sxjournalentryid and
+Â Â Â Â Â Â Â Â Â Â Â Â on je.sxid = ae.sxjournalentryid and
                je.sxRowDeleted = 'N' 
             inner join fiscal_period fp
 			on fp.sxId = sxPeriodId 
@@ -54,9 +54,9 @@ from
 		    og.sxrowdeleted = 'N' and
 			og.sxstatus = 'A'
     group by
-            substring(og.sxExtOrderId,0,len(og.sxExtOrderId)-3)
+Â Â Â Â Â Â Â      substring(og.sxExtOrderId,0,len(og.sxExtOrderId)-3)
     having
-            sum(case when ae.sxtype = 'D' then 1
+Â Â           sum(case when ae.sxtype = 'D' then 1
 			         when ae.sxtype = 'C' then -1 
 			      end * ae.sxtransactionalamt) <> 0
  ) x
