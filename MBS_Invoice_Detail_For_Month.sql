@@ -30,7 +30,7 @@ select /*+ parallel(m,8) */
  where  
   c.file_seq_num = i.file_seq_num and
   c.file_status = 'LC' AND
-  to_char(last_day(c.ctcr_sys_cre_dt),'yyyymmdd') = to_char(last_day(to_date('2022-11-01','yyyy-mm-dd')),'yyyymmdd') and
+  to_char(last_day(c.ctcr_sys_cre_dt),'yyyymmdd') = to_char(last_day(to_date('2024-11-01','yyyy-mm-dd')),'yyyymmdd') and
   c.version_num = (select max(c1.version_num) from finance.mbs_invoice_control c1 
                   where c1.file_seq_num = c.file_seq_num and c1.file_status = 'LC') and
   m.file_seq_num = i.file_seq_num and
