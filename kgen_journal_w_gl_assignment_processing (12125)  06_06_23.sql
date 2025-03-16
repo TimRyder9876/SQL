@@ -109,8 +109,8 @@ with gl_matrix as
        nvl(j.channel_code,'NULL') = decode(z.CHANNEL_CODE,'*',nvl(j.channel_code,'NULL'),z.CHANNEL_CODE) and
 
        --last_day(trunc(j.ctcr_batch_prog_dt)) = to_date('2019-12-31','yyyy-mm-dd')
-       trunc(j.ctcr_batch_prog_dt) <= to_date('2023-05-31','yyyy-mm-dd') and
-       trunc(j.ctcr_batch_prog_dt) >= to_date('2023-05-01','yyyy-mm-dd') 
+       trunc(j.ctcr_batch_prog_dt) <= to_date('2024-05-31','yyyy-mm-dd') and
+       trunc(j.ctcr_batch_prog_dt) >= to_date('2024-05-01','yyyy-mm-dd') 
       group by
        trunc(j.ctcr_batch_prog_dt),
        j.trans_id,
